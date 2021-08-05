@@ -45,4 +45,5 @@ CREATE TABLE ATENDIMENTO(
 	idPet INT FOREIGN KEY REFERENCES PET(idPet),
 	idVeterinario INT FOREIGN KEY REFERENCES VETERINARIO(idVeterinario),
 	dataAtendimento DATE
+	descricao VARCHAR(200)
 );
