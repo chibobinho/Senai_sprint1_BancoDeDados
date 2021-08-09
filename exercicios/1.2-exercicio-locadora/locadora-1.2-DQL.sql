@@ -6,3 +6,17 @@ SELECT * FROM MODELO
 SELECT * FROM CLIENTE
 SELECT * FROM VEICULO
 
+SELECT nomeCliente, nomeModelo, dataRetirada, dataDevolucao
+FROM CLIENTE
+LEFT JOIN MODELO
+ON CLIENTE.idCliente = MODELO.idModelo
+LEFT JOIN VEICULO
+ON CLIENTE.idCliente = VEICULO.idVeiculo
+
+SELECT nomeCliente, nomeModelo, dataRetirada, dataDevolucao
+FROM CLIENTE
+LEFT JOIN MODELO
+ON CLIENTE.idCliente = MODELO.idModelo
+LEFT JOIN VEICULO
+ON CLIENTE.idCliente = VEICULO.idVeiculo
+WHERE CLIENTE.idCliente = 1

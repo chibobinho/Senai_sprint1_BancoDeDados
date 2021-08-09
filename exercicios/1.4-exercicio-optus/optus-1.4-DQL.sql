@@ -4,3 +4,22 @@ SELECT * FROM EMPRESA
 SELECT * FROM ALBUM
 SELECT * FROM ESTILO
 SELECT * FROM USUARIO
+
+SELECT nome, email, tipoPermissao
+FROM USUARIO
+WHERE USUARIO.tipoPermissao = 0
+
+SELECT nomeAlbum, anoLancamento 
+FROM ALBUM 
+WHERE ALBUM.anoLancamento >= 2000
+
+SELECT * FROM USUARIO
+WHERE USUARIO.email = 'YURI@GMAIL.COM' AND USUARIO.senha = 'YURI123'
+
+
+SELECT nomeAlbum, anoLancamento, nomeArtista, nomeEstilo 
+FROM ALBUM
+LEFT JOIN ALBUM_ESTILO
+ON ALBUM.idAlbum = ALBUM_ESTILO.idAlbum
+LEFT JOIN ESTILO
+ON ALBUM_ESTILO.idEstilo = ESTILO.idEstilo

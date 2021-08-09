@@ -5,7 +5,7 @@ VALUES ('AÇÃO'), ('ROMANCE')
 GO
 
 INSERT INTO GENERO (nomeGenero)
-VALUES ('COMÉDIA')
+VALUES ('COMÉDIA') ('TERROR')
 GO
 
 INSERT INTO FILME (idGenero,tituloFilme)

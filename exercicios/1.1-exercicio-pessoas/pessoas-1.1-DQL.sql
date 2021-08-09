@@ -4,3 +4,14 @@ SELECT * FROM PESSOA
 SELECT * FROM TELEFONE
 SELECT * FROM EMAIL
 SELECT * FROM CNH
+
+SELECT numeroTelefone, descricao, end_email, nomePessoa 
+FROM Pessoa
+LEFT JOIN TELEFONE
+ON TELEFONE.idPessoa = PESSOA.idPessoa
+LEFT JOIN CNH
+ON CNH.idPessoa = PESSOA.idPessoa
+LEFT JOIN EMAIL
+ON EMAIL.idPessoa = PESSOA.idPessoa
+ORDER BY nomePessoa DESC
+
